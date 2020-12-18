@@ -142,7 +142,7 @@ def format_time(bot, trigger, stamp):
 
 
 @module.url(r'https?://(?:m(?:obile)\.)?twitter\.com/(?P<user>[^/]+)(?:$|/status/(?P<status>\d+)).*')
-@module.url(r'https?://twitter\.com/i/web/status/(?P<status>\d+).*')
+@module.url(r'https?://(?:m(?:obile)\.)?twitter\.com/i/web/status/(?P<status>\d+).*')
 def get_url(bot, trigger, match):
     things = match.groupdict()
     user = things.get('user', None)
